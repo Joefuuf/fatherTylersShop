@@ -45,9 +45,9 @@ public class makingPurchases extends javax.swing.JFrame {
         subtotalLabel = new javax.swing.JLabel();
         taxLabel = new javax.swing.JLabel();
         grandTotalLabel = new javax.swing.JLabel();
-        subtotal = new javax.swing.JLabel();
-        tax = new javax.swing.JLabel();
-        grandTotal = new javax.swing.JLabel();
+        subtotalEmt = new javax.swing.JLabel();
+        taxEmt = new javax.swing.JLabel();
+        grandTotalEmt = new javax.swing.JLabel();
         enterButton = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -159,16 +159,16 @@ public class makingPurchases extends javax.swing.JFrame {
                                     .addGroup(backgroundPanelLayout.createSequentialGroup()
                                         .addComponent(subtotalLabel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(subtotal))
+                                        .addComponent(subtotalEmt))
                                     .addComponent(amountSelectInput3, javax.swing.GroupLayout.PREFERRED_SIZE, 162, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(backgroundPanelLayout.createSequentialGroup()
                                         .addComponent(taxLabel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(tax))
+                                        .addComponent(taxEmt))
                                     .addGroup(backgroundPanelLayout.createSequentialGroup()
                                         .addComponent(grandTotalLabel)
                                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                        .addComponent(grandTotal)))))))
+                                        .addComponent(grandTotalEmt)))))))
                 .addContainerGap(29, Short.MAX_VALUE))
             .addGroup(backgroundPanelLayout.createSequentialGroup()
                 .addComponent(storeLogoLabel)
@@ -196,34 +196,34 @@ public class makingPurchases extends javax.swing.JFrame {
                             .addComponent(itemLabel1)
                             .addComponent(amountSelectInput, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addComponent(storeLogoLabeleth))
-                .addGap(18, 18, 18)
-                .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(itemLabel2)
-                    .addComponent(amountSelectInput2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(18, 18, 18)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(amountSelectInput2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(itemLabel2))
                 .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(backgroundPanelLayout.createSequentialGroup()
-                        .addGap(0, 32, Short.MAX_VALUE)
-                        .addComponent(storeLogoLabel))
-                    .addGroup(backgroundPanelLayout.createSequentialGroup()
-                        .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(itemLabel3)
-                            .addComponent(amountSelectInput3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(3, 3, 3)
+                        .addComponent(amountSelectInput3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(enterButton)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(subtotalLabel)
-                            .addComponent(subtotal))
+                            .addComponent(subtotalEmt))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(taxLabel)
-                            .addComponent(tax))
+                            .addComponent(taxEmt))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addGroup(backgroundPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                             .addComponent(grandTotalLabel)
-                            .addComponent(grandTotal))
-                        .addGap(0, 0, Short.MAX_VALUE))))
+                            .addComponent(grandTotalEmt))
+                        .addGap(0, 0, Short.MAX_VALUE))
+                    .addGroup(backgroundPanelLayout.createSequentialGroup()
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(itemLabel3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 42, Short.MAX_VALUE)
+                        .addComponent(storeLogoLabel))))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -254,7 +254,16 @@ public class makingPurchases extends javax.swing.JFrame {
 
     private void enterButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_enterButtonActionPerformed
         Scanner KeyedInput = new Scanner (System.in);
-        double subtotal,tax,grandTotal; 
+        double subtotal,tax,grandTotal,item1,item2,item3; 
+        item1 = 6*Double.parseDouble(amountSelectInput.getText());
+        item2 = 5*Double.parseDouble(amountSelectInput2.getText());
+        item3 = 3*Double.parseDouble(amountSelectInput3.getText());
+        subtotal = item1 + item2 + item3;
+        tax = subtotal*0.13;
+        grandTotal = subtotal - tax;
+        taxEmt.setText ("$"+String.valueOf(tax));
+        subtotalEmt.setText ("$"+String.valueOf(subtotal));     
+        grandTotalEmt.setText ("$"+String.valueOf(grandTotal));
         
     }//GEN-LAST:event_enterButtonActionPerformed
 
@@ -299,7 +308,7 @@ public class makingPurchases extends javax.swing.JFrame {
     private javax.swing.JTextField amountSelectInput3;
     private javax.swing.JPanel backgroundPanel;
     private javax.swing.JButton enterButton;
-    private javax.swing.JLabel grandTotal;
+    private javax.swing.JLabel grandTotalEmt;
     private javax.swing.JLabel grandTotalLabel;
     private javax.swing.JLabel itemLabel1;
     private javax.swing.JLabel itemLabel2;
@@ -310,9 +319,9 @@ public class makingPurchases extends javax.swing.JFrame {
     private javax.swing.JLabel subHeading3;
     private javax.swing.JLabel subSubheading;
     private javax.swing.JLabel subheading;
-    private javax.swing.JLabel subtotal;
+    private javax.swing.JLabel subtotalEmt;
     private javax.swing.JLabel subtotalLabel;
-    private javax.swing.JLabel tax;
+    private javax.swing.JLabel taxEmt;
     private javax.swing.JLabel taxLabel;
     private javax.swing.JLabel titleLabel;
     // End of variables declaration//GEN-END:variables

@@ -70,7 +70,7 @@
                       <Group type="102" alignment="0" attributes="0">
                           <EmptySpace min="-2" pref="42" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                              <Group type="102" attributes="0">
+                              <Group type="102" alignment="0" attributes="0">
                                   <Component id="itemLabel2" min="-2" pref="162" max="-2" attributes="0"/>
                                   <EmptySpace max="32767" attributes="0"/>
                                   <Component id="amountSelectInput2" min="-2" pref="162" max="-2" attributes="0"/>
@@ -87,18 +87,18 @@
                                       <Group type="102" attributes="0">
                                           <Component id="subtotalLabel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="subtotal" min="-2" max="-2" attributes="0"/>
+                                          <Component id="subtotalEmt" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Component id="amountSelectInput3" min="-2" pref="162" max="-2" attributes="0"/>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="taxLabel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="tax" min="-2" max="-2" attributes="0"/>
+                                          <Component id="taxEmt" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                       <Group type="102" alignment="0" attributes="0">
                                           <Component id="grandTotalLabel" min="-2" max="-2" attributes="0"/>
                                           <EmptySpace max="-2" attributes="0"/>
-                                          <Component id="grandTotal" min="-2" max="-2" attributes="0"/>
+                                          <Component id="grandTotalEmt" min="-2" max="-2" attributes="0"/>
                                       </Group>
                                   </Group>
                               </Group>
@@ -139,40 +139,39 @@
                       </Group>
                       <Component id="storeLogoLabeleth" alignment="0" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
-                  <Group type="103" groupAlignment="3" attributes="0">
-                      <Component id="itemLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
-                      <Component id="amountSelectInput2" alignment="3" min="-2" max="-2" attributes="0"/>
-                  </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="0" pref="32" max="32767" attributes="0"/>
-                          <Component id="storeLogoLabel" min="-2" max="-2" attributes="0"/>
-                      </Group>
+                      <Component id="amountSelectInput2" min="-2" max="-2" attributes="0"/>
+                      <Component id="itemLabel2" min="-2" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" alignment="0" attributes="0">
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="itemLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="amountSelectInput3" alignment="3" min="-2" max="-2" attributes="0"/>
-                          </Group>
+                          <EmptySpace min="-2" pref="3" max="-2" attributes="0"/>
+                          <Component id="amountSelectInput3" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Component id="enterButton" min="-2" max="-2" attributes="0"/>
                           <EmptySpace max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="subtotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="subtotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="subtotalEmt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="taxLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="tax" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="taxEmt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace type="unrelated" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="3" attributes="0">
                               <Component id="grandTotalLabel" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="grandTotal" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="grandTotalEmt" alignment="3" min="-2" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                      </Group>
+                      <Group type="102" alignment="0" attributes="0">
+                          <EmptySpace max="-2" attributes="0"/>
+                          <Component id="itemLabel3" min="-2" max="-2" attributes="0"/>
+                          <EmptySpace pref="42" max="32767" attributes="0"/>
+                          <Component id="storeLogoLabel" min="-2" max="-2" attributes="0"/>
                       </Group>
                   </Group>
               </Group>
@@ -306,11 +305,11 @@
             <Property name="text" type="java.lang.String" value="Grand total :"/>
           </Properties>
         </Component>
-        <Component class="javax.swing.JLabel" name="subtotal">
+        <Component class="javax.swing.JLabel" name="subtotalEmt">
         </Component>
-        <Component class="javax.swing.JLabel" name="tax">
+        <Component class="javax.swing.JLabel" name="taxEmt">
         </Component>
-        <Component class="javax.swing.JLabel" name="grandTotal">
+        <Component class="javax.swing.JLabel" name="grandTotalEmt">
         </Component>
         <Component class="javax.swing.JButton" name="enterButton">
           <Properties>
